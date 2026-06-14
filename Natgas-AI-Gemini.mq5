@@ -65,7 +65,7 @@ input double   InpMinEmaSpread_S1 = 0.0020;    // MINIMUM EMA SPREAD (Loosened t
 
 // Trailing Stop for Strat 1
 input bool     InpUseTrailing_S1 = true;       // Enable Trailing for Strategy 1
-input int      InpTrailing_Start_S1 = 50;      // Start trailing after X points profit
+input int      InpTrailing_Start_S1 = 30;      // Start trailing after X points profit
 input int      InpTrailing_Dist_S1 = 25;       // Trail X points behind price
 
 // Stoch Settings (Shared)
@@ -107,12 +107,12 @@ input group "=== Shared Indicators ==="
 input int      InpEMA20_Period = 20;           // EMA Fast Period
 input int      InpEMA50_Period = 50;           // EMA Slow Period
 
-input group "=== Diagnostics & Logging ==="
+input group "=== Diagnostics & Logging === Strategy 1"
 input bool     InpLogAllCandles = false;       // Record "NO TRADE" candles to CSV for Data Mining
 
 input group "=== Strategy 2: Data Miner ==="
 input bool          InpRunS2Miner = false;      // Enable S2 Data Miner
-input ENUM_MINER_TF InpMinerTF    = TF_M5;     // Miner Timeframe
+input ENUM_MINER_TF InpMinerTF    = TF_M15;     // Miner Timeframe
 
 //--- Global Variables
 CTrade         trade;
