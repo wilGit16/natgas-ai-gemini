@@ -113,7 +113,6 @@ int            handle_EMA50_M5;
 int            handle_Stoch_M5;
 int            handle_RSI_M5;
 datetime       lastBarTime_M5 = 0;
-datetime       lastBarTime_M5_Trade = 0;
 string         csvFilename_M5_Miner = "";
 
 //--- Statistics Variables
@@ -872,5 +871,4 @@ void OnTick()
      }
 
    if(currBarTime != lastBarTime) lastBarTime = currBarTime;
-   if(currBarTime_M5 != lastBarTime_M5_Trade) lastBarTime_M5_Trade = currBarTime_M5;
   }
