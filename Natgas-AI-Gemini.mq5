@@ -34,9 +34,9 @@ input group "=== Global Targets & Risk ==="
 input int      InpTakeProfit     = 150;           // Global: Take Profit (Points)
 input int      InpStopLoss       = 150;           // Global: Stop Loss (Points)
 input bool     InpUseTrailing    = true;          // Global: Enable Trailing Stop
-input int      InpTrailing_Start = 80;            // Global: Start trailing after X points profit
-input int      InpTrailing_Dist  = 60;            // Global: Trail X points behind price
-input int      InpTrailing_Step  = 30;            // Global: Trail Step (Min points to move SL)
+input int      InpTrailing_Start = 50;            // Global: Start trailing after X points profit
+input int      InpTrailing_Dist  = 40;            // Global: Trail X points behind price
+input int      InpTrailing_Step  = 20;            // Global: Trail Step (Min points to move SL)
 
 input group "=== Days to Trade ==="
 input bool     InpTradeMonday    = true;          // Trade on Monday
@@ -46,7 +46,7 @@ input bool     InpTradeThursday  = true;          // Trade on Thursday
 input bool     InpTradeFriday    = true;          // Trade on Friday
 
 input group "=== Time Filter Settings ==="
-input bool     InpUseTimeFilter = true;           // Restrict trading to specific hours
+input bool     InpUseTimeFilter = false;           // Restrict trading to specific hours
 input int      InpStartHour     = 8;              // Start Trading (Broker Server Time)
 input int      InpEndHour       = 20;             // Stop Trading (Broker Server Time)
 
